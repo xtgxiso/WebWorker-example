@@ -11,7 +11,7 @@ define('GLOBAL_START', 1);
 foreach(glob(__DIR__.'/Applications/*/start*.php') as $start_file)
 {
     require_once $start_file;
-}i
+}
 
 // 运行所有服务
 Worker::runAll();
