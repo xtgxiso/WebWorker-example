@@ -1,3 +1,4 @@
 *.log
 vendor
 composer.lock
+Applications/Statistics/data/
