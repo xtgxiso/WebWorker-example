@@ -7,3 +7,11 @@ $app->HandleFunc("/",function() use($app){
 	);
     $app->ServerJson($data);
 });
+
+
+$app->HandleFunc("/hello",function() use($app){
+    $test_model = new Test_models($app);
+    $data = $test_model->getall();
+    $app->ServerJson($data);
+});
+
