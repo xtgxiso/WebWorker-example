@@ -1,5 +1,5 @@
 {
     "require": {
-        "xtgxiso/webworker": "*"
+        "xtgxiso/webworker": ">=0.1.8"
     }
 }

@@ -37,9 +37,9 @@ $app->onAppStart = function($app) use($config){
 };
 
 //对所有接口做签名验证
-$app->AddFunc("/",function() use($app){
+$app->AddFunc("/",function() {
     if ( $_SERVER['REMOTE_ADDR'] != '127.0.0.1' ) {
-        $app->ServerJson(array("ret"=>1,"error"=>"禁止访问"));
+        $this->ServerJson(array("ret"=>1,"error"=>"禁止访问"));
         return true;//返回ture,中断执行后面的路由或中间件，直接返回给浏览器
     }   
 });
