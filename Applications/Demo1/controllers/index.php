@@ -10,7 +10,7 @@ $app->HandleFunc("/",function() {
 
 
 $app->HandleFunc("/hello",function() {
-    $test_model = new Test_models($app);
+    $test_model = new Test_models($this);
     $data = $test_model->getall();
     $this->ServerJson($data);
 });
