@@ -17,7 +17,7 @@ composer require xtgxiso/webworker
 php start.php start     //以调试模块启动 
 php start.php start -d  //以守护进程启动
 php start.php stop      //停止进程
-php start.php reload    //重新加载on中的包含文件
+php start.php reload    //重新加载onAppStart中的包含文件
 php start.php restart   //重新启动
 php start.php status    //查看进程情况
 ```
