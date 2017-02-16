@@ -33,7 +33,8 @@ $app->statistic_server = "udp://127.0.0.1:55656";
 //初始化redis和mysqli连接
 $app->onAppStart = function($app) use($config){
     $app->redis = Mredis::getInstance($config["redis"]);
-    $app->db = Mdb::getInstance($config["db"]); 
+    $app->db = Mdb::getInstance($config["db"]);
+    //支持接受reload信号，这包含的文件修改不需要重启 
     WebWorker\autoload_dir($app->autoload); 
 };
 
