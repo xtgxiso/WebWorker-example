@@ -13,7 +13,7 @@ class Test_models{
 	    return $cache;
 	}else{
 	    $sql = "select now() as now";
-	    $list = $this->app->db->query($sql)->fetch_all(MYSQLI_ASSOC);
+	    $list = $this->app->db->query($sql)->result_array();
 	    $this->app->redis->set("test",serialize($list));
 	    return $list;
 	}
